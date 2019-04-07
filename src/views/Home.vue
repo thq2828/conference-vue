@@ -5,7 +5,6 @@
             <navigation2/>
             <router-view/>
         </div>
-        <version/>
     </div>
 </template>
 

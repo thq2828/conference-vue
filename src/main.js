@@ -10,9 +10,16 @@ import Navigation2 from "./components/conference-comp/Navigation2";
 import Element from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 
-/*element组件*/
-Vue.use(Element)
+import axios from 'axios'
+/*axios组件*/
+Vue.prototype.$ajax= axios
 
+
+/*element组件*/
+Vue.use(Element);
+
+axios.defaults.baseURL = 'https://localhost:8081/';
+axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 Vue.config.productionTip = false;
 Vue.component('Logo', Logo);
 Vue.component('Version', Version);

@@ -6,32 +6,10 @@
         <div class="button">
 
             <div class="b-div">
-                <p class="b-chart">标题：</p>
+                <p class="b-chart">姓名：</p>
                 <el-input class="b-input" v-model="input" placeholder="请输入内容" size="small"></el-input>
             </div>
-            <div class="b-div">
-                <p class="b-chart">会议室：</p>
-                <el-input class="b-input" v-model="input" placeholder="请输入内容" size="small"></el-input>
-            </div>
-            <div class="b-div">
-                <p class="b-chart">组织人员：</p>
-                <el-input class="b-input" v-model="input" placeholder="请输入内容" size="small"></el-input>
-            </div>
-            <div class="b-div b-dtime">
-                <template>
-                    <div class="block b-d-dtime">
-                        <span>时间范围：</span>
-                        <el-date-picker
-                                v-model="value3"
-                                type="datetimerange"
-                                range-separator="至"
-                                start-placeholder="开始日期"
-                                end-placeholder="结束日期"
-                                size="small">
-                        </el-date-picker>
-                    </div>
-                </template>
-            </div>
+
             <div class="b-query b-div">
                 <div class="b-b-button" id="reset">
                     <el-button type="warning" plain>重置</el-button>
@@ -45,11 +23,11 @@
         <!--标题区-->
         <div class="title">
             <div class="t-title">
-                <form class="e-button" action="/addConference">
+                <form class="e-button" action="/addPersonnel">
                     <el-button type="success" native-type="submit">新增</el-button>
                 </form>
             </div>
-            <div class="t-title"><p>会议列表</p></div>
+            <div class="t-title"><p>人员列表</p></div>
         </div>
         <!--列表区-->
         <div class="list">
@@ -57,67 +35,66 @@
                 <thead>
                 <tr>
                     <td>序号</td>
-                    <td>会议标题</td>
-                    <td>会议室</td>
-                    <td>组织人员</td>
-                    <td>时间</td>
+                    <td>姓名</td>
+                    <td>部门</td>
+                    <td>职业</td>
+                    <td>性别</td>
                     <td>操作</td>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
                     <td>1</td>
-                    <td>后端评审1</td>
-                    <td>会议室1</td>
                     <td>张三</td>
-                    <td>2019.03.25 09:00-11:00</td>
+                    <td>移动互联网部</td>
+                    <td>软件工程师</td>
+                    <td>男</td>
                     <td>
-                        <input type="button" value="编辑" onclick="location.href='/editorConference'" class="modify">
+                        <input type="button" value="编辑" onclick="location.href='/editorPersonnel'" class="modify">
                         <input type="button" value="删除" class="delete">
                     </td>
                 </tr>
                 <tr>
                     <td>2</td>
-                    <td>后端评审2</td>
-                    <td>会议室2</td>
-                    <td>张三</td>
-                    <td>2019.03.26 09:00-11:00</td>
+                    <td>李四</td>
+                    <td>移动互联网部</td>
+                    <td>软件工程师</td>
+                    <td>男</td>
                     <td>
-
-                        <input type="button" value="编辑" onclick="location.href='/editorConference'" class="modify">
+                        <input type="button" value="编辑" onclick="location.href='/editorPersonnel'" class="modify">
                         <input type="button" value="删除" class="delete">
                     </td>
                 </tr>
                 <tr>
                     <td>3</td>
-                    <td>后端评审3</td>
-                    <td>会议室3</td>
-                    <td>张三</td>
-                    <td>2019.03.27 09:00-11:00</td>
+                    <td>王五</td>
+                    <td>移动互联网部</td>
+                    <td>软件工程师</td>
+                    <td>男</td>
                     <td>
-                        <input type="button" value="编辑" onclick="location.href='/editorConference'" class="modify">
+                        <input type="button" value="编辑" onclick="location.href='/editorPersonnel'" class="modify">
                         <input type="button" value="删除" class="delete">
                     </td>
                 </tr>
                 <tr>
                     <td>4</td>
-                    <td>后端评审4</td>
-                    <td>会议室4</td>
-                    <td>张三</td>
-                    <td>2019.03.28 09:00-11:00</td>
+                    <td>赵六</td>
+                    <td>移动互联网部</td>
+                    <td>软件工程师</td>
+                    <td>男</td>
                     <td>
-                        <input type="button" value="编辑" onclick="location.href='/editorConference'" class="modify">
+                        <input type="button" value="编辑" onclick="location.href='/editorPersonnel'" class="modify">
                         <input type="button" value="删除" class="delete">
                     </td>
                 </tr>
                 <tr>
                     <td>5</td>
-                    <td>后端评审5</td>
-                    <td>会议室5</td>
-                    <td>张三</td>
-                    <td>2019.03.29 09:00-11:00</td>
+                    <td>钱七</td>
+                    <td>移动互联网部</td>
+                    <td>软件工程师</td>
+                    <td>男</td>
                     <td>
-                        <input type="button" value="编辑" onclick="location.href='/editorConference'" class="modify">
+                        <input type="button" value="编辑" onclick="location.href='/editorPersonnel'" class="modify">
                         <input type="button" value="删除" class="delete">
                     </td>
                 </tr>
@@ -128,7 +105,7 @@
                     <td></td>
                     <td></td>
                     <td>
-                        <input type="button" value="编辑" onclick="location.href='/editorConference'" class="modify">
+                        <input type="button" value="编辑" onclick="location.href='/editorPersonnel'" class="modify">
                         <input type="button" value="删除" class="delete">
                     </td>
                 </tr>
@@ -139,7 +116,7 @@
                     <td></td>
                     <td></td>
                     <td>
-                        <input type="button" value="编辑" onclick="location.href='/editorConference'" class="modify">
+                        <input type="button" value="编辑" onclick="location.href='/editorPersonnel'" class="modify">
                         <input type="button" value="删除" class="delete">
                     </td>
                 </tr>
@@ -150,7 +127,7 @@
                     <td></td>
                     <td></td>
                     <td>
-                        <input type="button" value="编辑" onclick="location.href='/editorConference'" class="modify">
+                        <input type="button" value="编辑" onclick="location.href='/editorPersonnel'" class="modify">
                         <input type="button" value="删除" class="delete">
                     </td>
                 </tr>
@@ -161,7 +138,7 @@
                     <td></td>
                     <td></td>
                     <td>
-                        <input type="button" value="编辑" onclick="location.href='/editorConference'" class="modify">
+                        <input type="button" value="编辑" onclick="location.href='/editorPersonnel'" class="modify">
                         <input type="button" value="删除" class="delete">
                     </td>
                 </tr>
@@ -172,7 +149,7 @@
                     <td></td>
                     <td></td>
                     <td>
-                        <input type="button" value="编辑" onclick="location.href='/editorConference'" class="modify">
+                        <input type="button" value="编辑" onclick="location.href='/editorPersonnel'" class="modify">
                         <input type="button" value="删除" class="delete">
                     </td>
                 </tr>
@@ -193,33 +170,13 @@
 </template>
 <script>
     export default {
-        name: 'ConferenceList',
+        name: 'PersonnelList',
         data() {
             return {
-                conferences:[],
-                loading:true,
-                totalCount:null,
-                code:null,
-                message:null,
                 input: '',
                 value3: ''
             }
 
-        },
-        methods:{
-             getConferences(){
-                axios.get('/conferences').then(res=> {
-                    if (res.data==null){
-                        this.code=res.code;
-                        this.message=res.message;
-                    }else {
-                        this.conferences=res.data;
-                    }
-                })
-            },
-            mounted() {
-                this.getCoerences();
-            },nf
         }
     }
 </script>

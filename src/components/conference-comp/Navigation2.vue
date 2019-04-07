@@ -4,7 +4,7 @@
     <!--导航区-->
     <div class="navigation">
         <el-row class="tac">
-            <el-col :span="12">
+            <el-col :span="12" class="e-cl">
                 <el-menu
                         router="true"
                         default-active="2"
@@ -17,12 +17,11 @@
                             <i class="el-icon-location"></i>
                             <span>导航</span>
                         </template>
-                        <el-menu-item index="/first">首页</el-menu-item>
+                        <el-menu-item index="/first" >首页</el-menu-item>
                         <el-menu-item index="/conferenceList">会议管理</el-menu-item>
-                        <el-menu-item index="1-3">人员管理</el-menu-item>
-                        <el-menu-item index="1-4">会议室管理</el-menu-item>
+                        <el-menu-item index="/personnelList" >人员管理</el-menu-item>
+                        <el-menu-item index="/meettingList" >会议室管理</el-menu-item>
                     </el-submenu>
-
                 </el-menu>
             </el-col>
         </el-row>
