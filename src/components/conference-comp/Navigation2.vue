@@ -6,8 +6,8 @@
         <el-row class="tac">
             <el-col :span="12" class="e-cl">
                 <el-menu
-                        router="true"
-                        default-active="2"
+                        router
+                        :default-active="this.$route.path"
                         class="el-menu-vertical-demo"
                         background-color="#253544"
                         text-color="#fff"
